@@ -1,8 +1,8 @@
 <?php
-require_once("Renderer.php");
+require_once("AudioTrackRenderer.php");
 require_once("PodcastTrack.php");
 
-class PodcastTrackRenderer implements Renderer
+class PodcastTrackRenderer extends AudioTrackRenderer
 {
 
     public PodcastTrack $podcastTrack;
@@ -11,20 +11,8 @@ class PodcastTrackRenderer implements Renderer
         $this->podcastTrack = $pt;
     }
 
-    public function render(int $selecteur): string
-    {
-        switch ($selecteur) {
-            case self::COMPACT:
-                return $this->renderCompact();
-            case self::LONG:
-                return $this->renderLong();
-            default:
-                return "<p>Mode d'affichage inconnu.</p>";
-        }
-    }
-
     // --- Méthode privée : affichage compact ---
-    private function renderCompact(): string
+    public function renderCompact(): string
     {
         return "
         <div class='track compact'>
@@ -38,7 +26,7 @@ class PodcastTrackRenderer implements Renderer
     }
 
     // --- Méthode privée : affichage long ---
-    private function renderLong(): string
+    public function renderLong(): string
     {
         return "
         <div class='track long'>
