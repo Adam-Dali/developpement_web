@@ -1,14 +1,14 @@
 <?php
-
 require_once("Renderer.php");
-require_once("AlbumTrack.php");
+require_once("PodcastTrack.php");
 
-class AlbumTrackRenderer implements Renderer
+class PodcastTrackRenderer implements Renderer
 {
-    public AlbumTrack $albumTrack;
 
-    function __construct(AlbumTrack $at){
-        $this->albumTrack = $at;
+    public PodcastTrack $podcastTrack;
+
+    public function __construct(PodcastTrack $pt){
+        $this->podcastTrack = $pt;
     }
 
     public function render(int $selecteur): string
@@ -28,9 +28,9 @@ class AlbumTrackRenderer implements Renderer
     {
         return "
         <div class='track compact'>
-            <p><strong>{$this->albumTrack->titre}</strong> - {$this->albumTrack->artiste}</p>
+            <p><strong>{$this->podcastTrack->titre}</strong> - {$this->podcastTrack->auteur}</p>
             <audio controls preload='none'>
-                <source src='{$this->albumTrack->nomFichAudio}' type='audio/mpeg'>
+                <source src='{$this->podcastTrack->nomFichAudio}' type='audio/mpeg'>
                 Votre navigateur ne supporte pas la balise audio.
             </audio>
         </div>
@@ -42,17 +42,17 @@ class AlbumTrackRenderer implements Renderer
     {
         return "
         <div class='track long'>
-            <h2>{$this->albumTrack->titre}</h2>
-            <p><b>Artiste :</b> {$this->albumTrack->artiste}</p>
-            <p><b>Album :</b> {$this->albumTrack->album}</p>
-            <p><b>Année :</b> {$this->albumTrack->annee}</p>
-            <p><b>Genre :</b> {$this->albumTrack->genre}</p>
-            <p><b>Durée :</b> {$this->albumTrack->duree} secondes</p>
+            <h2>{$this->podcastTrack->titre}</h2>
+            <p><b>Auteur :</b> {$this->podcastTrack->auteur}</p>
+            <p><b>Date :</b> {$this->podcastTrack->date}</p>
+            <p><b>Genre :</b> {$this->podcastTrack->genre}</p>
+            <p><b>Durée :</b> {$this->podcastTrack->duree} secondes</p>
             <audio controls>
-                <source src='{$this->albumTrack->nomFichAudio}' type='audio/mpeg'>
+                <source src='{$this->podcastTrack->nomFichAudio}' type='audio/mpeg'>
                 Votre navigateur ne supporte pas la balise audio.
             </audio>
         </div>
         ";
     }
+
 }

@@ -3,6 +3,7 @@
 require_once("AlbumTrack.php");
 require_once("AlbumTrackRenderer.php");
 require_once("PodcastTrack.php");
+require_once("PodcastTrackRenderer.php");
 
 $piste4 = new AlbumTrack("At the end of my beloved time limit", "./../../../Users/adamd/Music/Trails_through_Daybreak_2_title_theme.mp4", "Kuro no Kiseki II OST", 1);
 $piste5 = new AlbumTrack("Silver Will", ".\..\..\..\Users\adamd\Music\Silver Will (SOra).ogg", "Sora no Kiseki OST", 2);
@@ -39,5 +40,6 @@ $rendre = new AlbumTrackRenderer($piste5);
 echo $rendre->render(2);
 
 $pod = new PodcastTrack("Kurode", "./../../../Users/adamd/Music/Trails_through_Daybreak_2_title_theme.mp4");
-echo $pod;
-
+//echo $pod;
+$rendre2 = new PodcastTrackRenderer($pod);
+echo $rendre2->render(1);
