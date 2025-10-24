@@ -115,4 +115,10 @@ function play(array $pl) : void {
 function remove_track(array $pl, int $num){
     unset($pl["pistes"][$num]);
 }
+
+//Exercice 10
+function pl_shuffle($playlist) {
+    shuffle($playlist['pistes']);
+    return $playlist;
+}
 ?>
