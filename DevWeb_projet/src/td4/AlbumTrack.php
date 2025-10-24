@@ -21,7 +21,8 @@ class AlbumTrack {
     }
 
     public function __toString() : string {
-        return "La piste " . $this->numPiste . " - " . $this->titre ." par ". $this->artiste . " dans l'album " . $this->album . " publié en " . $this->annee . " d'une durée de " . $this->duree . "s, et accessible via : " . $this->nomFichAudio . "\n";
+        return json_encode(get_object_vars($this), JSON_PRETTY_PRINT);
+        //return "La piste " . $this->numPiste . " - " . $this->titre ." par ". $this->artiste . " dans l'album " . $this->album . " publié en " . $this->annee . " d'une durée de " . $this->duree . "s, et accessible via : " . $this->nomFichAudio . "\n";
     }
 
     public function turnToString() : string {
