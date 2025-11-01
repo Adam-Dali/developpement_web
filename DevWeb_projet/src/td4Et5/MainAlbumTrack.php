@@ -1,12 +1,26 @@
 <?php
 
+use td4Et5\InvalidPropertyNameException;
+use td4Et5\InvalidPropertyValueException;
+
 require_once("AlbumTrack.php");
 require_once("AlbumTrackRenderer.php");
 require_once("PodcastTrack.php");
 require_once("PodcastTrackRenderer.php");
+require_once("InvalidPropertyNameException.php");
+require_once("InvalidPropertyValueException.php");
 
 $piste4 = new AlbumTrack("At the end of my beloved time limit", "./../../../Users/adamd/Music/Trails_through_Daybreak_2_title_theme.mp4", "Kuro no Kiseki II OST", 1);
 $piste5 = new AlbumTrack("Silver Will", ".\..\..\..\Users\adamd\Music\Silver Will (SOra).ogg", "Sora no Kiseki OST", 2);
+
+try {
+    $piste6 = new AlbumTrack("QuelqueChose", ".\..\..\..\Users\adamd\Music\Silver Will (SOra).ogg", "LeMien", 1);
+    $piste6->artiste = "MoiBienSur";
+    $piste6->duree = -100; // provoque une exception
+} catch (InvalidPropertyNameException | InvalidPropertyValueException $e) {
+    echo "Erreur : " . $e->getMessage();
+    echo $e->getTraceAsString();
+}
 
 $piste4->artiste = "Falcom Sound Team jdk";
 $piste4->annee = 2022;
@@ -35,7 +49,7 @@ print_r($piste5);
 
 var_dump($piste4);
 var_dump($piste5);
-*/
+
 $rendre = new AlbumTrackRenderer($piste5);
 echo $rendre->render(2);
 
@@ -43,3 +57,5 @@ $pod = new PodcastTrack("Kurode", "./../../../Users/adamd/Music/Trails_through_D
 //echo $pod;
 $rendre2 = new PodcastTrackRenderer($pod);
 echo $rendre2->render(1);
+
+*/
