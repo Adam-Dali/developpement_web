@@ -1,6 +1,8 @@
 <?php
 
-namespace td4Et5;
+namespace td4Et5\audio\lists;
+
+use td4Et5\audio\tracks\AudioList;
 
 class Album extends AudioList
 {

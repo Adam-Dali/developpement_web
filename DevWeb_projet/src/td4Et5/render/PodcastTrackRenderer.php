@@ -1,13 +1,15 @@
 <?php
-require_once("AudioTrackRenderer.php");
-require_once("PodcastTrack.php");
+
+namespace td4Et5\render;
+use td4Et5\audio\tracks\PodcastTrack;
 
 class PodcastTrackRenderer extends AudioTrackRenderer
 {
 
     public PodcastTrack $podcastTrack;
 
-    public function __construct(PodcastTrack $pt){
+    public function __construct(PodcastTrack $pt)
+    {
         $this->podcastTrack = $pt;
     }
 

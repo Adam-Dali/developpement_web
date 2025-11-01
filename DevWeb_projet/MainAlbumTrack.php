@@ -1,14 +1,20 @@
 <?php
 
-use td4Et5\InvalidPropertyNameException;
-use td4Et5\InvalidPropertyValueException;
+require_once __DIR__ . '/src/td4Et5/audio/tracks/AlbumTrack.php';
+require_once __DIR__ . '/src/td4Et5/exception/InvalidPropertyNameException.php';
+require_once __DIR__ . '/src/td4Et5/exception/InvalidPropertyValueException.php';
 
-require_once("AlbumTrack.php");
+use td4Et5\audio\tracks\AlbumTrack;
+use td4Et5\exception\InvalidPropertyNameException;
+use td4Et5\exception\InvalidPropertyValueException;
+
+/*require_once("AlbumTrack.php");
 require_once("AlbumTrackRenderer.php");
 require_once("PodcastTrack.php");
 require_once("PodcastTrackRenderer.php");
 require_once("InvalidPropertyNameException.php");
-require_once("InvalidPropertyValueException.php");
+require_once("InvalidPropertyValueException.php");*/
+
 
 $piste4 = new AlbumTrack("At the end of my beloved time limit", "./../../../Users/adamd/Music/Trails_through_Daybreak_2_title_theme.mp4", "Kuro no Kiseki II OST", 1);
 $piste5 = new AlbumTrack("Silver Will", ".\..\..\..\Users\adamd\Music\Silver Will (SOra).ogg", "Sora no Kiseki OST", 2);
@@ -21,7 +27,7 @@ try {
     echo "Erreur : " . $e->getMessage();
     echo $e->getTraceAsString();
 }
-
+/*
 $piste4->artiste = "Falcom Sound Team jdk";
 $piste4->annee = 2022;
 $piste4->genre = "Bien";
@@ -31,7 +37,7 @@ $piste5->annee = 2004;
 $piste5->genre = "Bien";
 $piste5->duree = 160;
 
-/*echo "Piste 1 : \n";
+echo "Piste 1 : \n";
 echo "Titre : " . $piste4->titre . "\n";
 echo "Album : " . $piste4->album . "\n";
 echo "Durée : " . $piste4->duree . "\n";

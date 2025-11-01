@@ -1,10 +1,12 @@
 <?php
 
-require_once("InvalidPropertyValueException.php");
-require_once("InvalidPropertyNameException.php");
+namespace td4Et5\audio\tracks;
 
-use td4Et5\InvalidPropertyNameException;
-use td4Et5\InvalidPropertyValueException;
+require_once __DIR__ . '/../../exception/InvalidPropertyNameException.php';
+require_once __DIR__ . '/../../exception/InvalidPropertyValueException.php';
+
+use td4Et5\exception\InvalidPropertyNameException;
+use td4Et5\exception\InvalidPropertyValueException;
 
 class AudioTrack
 {
@@ -13,7 +15,8 @@ class AudioTrack
     protected int $duree;
     protected string $nomFichAudio;
 
-    public function __construct($titre, $nom){
+    public function __construct($titre, $nom)
+    {
         $this->titre = $titre;
         $this->nomFichAudio = $nom;
         $this->duree = 0;

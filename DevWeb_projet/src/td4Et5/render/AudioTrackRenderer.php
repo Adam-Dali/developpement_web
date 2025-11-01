@@ -1,11 +1,17 @@
 <?php
+
+namespace td4Et5\render;
+
+use td4Et5\audio\tracks\AudioTrack;
+
 require_once("Renderer.php");
 
 abstract class AudioTrackRenderer implements Renderer
 {
     public AudioTrack $track;
 
-    public function __construct(AudioTrack $track){
+    public function __construct(AudioTrack $track)
+    {
         $this->track = $track;
     }
 
@@ -22,6 +28,7 @@ abstract class AudioTrackRenderer implements Renderer
     }
 
     public abstract function renderCompact(): string;
+
     public abstract function renderLong(): string;
 
 }

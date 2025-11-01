@@ -1,8 +1,11 @@
 <?php
 
-namespace td4Et5;
+namespace td4Et5\render;
 
-class AudioListRenderer implements \Renderer
+use td4Et5\audio\lists\AudioList;
+use td4Et5\render;
+
+class AudioListRenderer implements render\Renderer
 {
     private AudioList $list;
 
