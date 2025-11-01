@@ -1,7 +1,7 @@
 <?php
 
-namespace td4Et5\render;
-use td4Et5\audio\tracks\PodcastTrack;
+namespace td4Et5Et7\render;
+use td4Et5Et7\audio\tracks\PodcastTrack;
 
 class PodcastTrackRenderer extends AudioTrackRenderer
 {

@@ -1,6 +1,8 @@
 <?php
 
-namespace td4Et5\audio\lists;
+namespace td4Et5Et7\audio\lists;
+
+use td4Et5Et7\audio\tracks\AudioTrack;
 
 class Playlist extends AudioList
 {

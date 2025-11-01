@@ -1,12 +1,12 @@
 <?php
 
-namespace td4Et5\audio\tracks;
+namespace td4Et5Et7\audio\tracks;
 
 require_once __DIR__ . '/../../exception/InvalidPropertyNameException.php';
 require_once __DIR__ . '/../../exception/InvalidPropertyValueException.php';
 
-use td4Et5\exception\InvalidPropertyNameException;
-use td4Et5\exception\InvalidPropertyValueException;
+use td4Et5Et7\exception\InvalidPropertyNameException;
+use td4Et5Et7\exception\InvalidPropertyValueException;
 
 class AudioTrack
 {

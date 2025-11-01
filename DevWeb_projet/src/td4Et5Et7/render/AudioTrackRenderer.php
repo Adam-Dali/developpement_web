@@ -1,8 +1,8 @@
 <?php
 
-namespace td4Et5\render;
+namespace td4Et5Et7\render;
 
-use td4Et5\audio\tracks\AudioTrack;
+use td4Et5Et7\audio\tracks\AudioTrack;
 
 require_once("Renderer.php");
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace td4Et5\render;
+namespace td4Et5Et7\render;
 interface Renderer
 {
     public const COMPACT = 1;

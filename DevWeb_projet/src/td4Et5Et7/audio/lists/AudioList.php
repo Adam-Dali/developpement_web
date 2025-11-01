@@ -1,6 +1,6 @@
 <?php
 
-namespace td4Et5\audio\lists;
+namespace td4Et5Et7\audio\lists;
 
 use Exception;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace td4Et5\render;
-use td4Et5\audio\tracks\AlbumTrack;
+namespace td4Et5Et7\render;
+use td4Et5Et7\audio\tracks\AlbumTrack;
 
 require_once("AudioTrackRenderer.php");
-require_once("td4Et5/audio/tracks/AlbumTrack.php");
+require_once("AlbumTrack.php");
 
 class AlbumTrackRenderer extends AudioTrackRenderer
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace td4Et5\audio\tracks;
+namespace td4Et5Et7\audio\tracks;
 
 require_once("AudioTrack.php");
 
